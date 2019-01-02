@@ -1,0 +1,178 @@
+﻿<mat-sidenav-container class="sidenav-container" (backdropClick)="sideNavClose()">
+    <mat-sidenav #sidenav mode="over" autoFocus="false" class="sideNav-style">
+        <mat-card class="sideNav-card">
+            <mat-card-header>
+                <div mat-card-avatar class="sideNav-header-image"></div>
+                <mat-card-title>{{currentUser.nickName}}</mat-card-title>
+                <mat-card-subtitle>{{currentUser.motto}}</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+
+        <mat-nav-list>
+            <a mat-list-item [routerLink]="['/user_profile']">
+                <mat-icon>account_circle</mat-icon>
+                <span>User Profile</span>
+            </a>
+            <a mat-list-item [routerLink]="['/data_sync']">
+                <mat-icon>data_usage</mat-icon>
+                <span>Data Synchronization</span>
+            </a>
+        </mat-nav-list>
+
+        <footer class="footer">
+            <div class="button-row">
+                <button mat-flat-button color="warn" (click)="logout()">LogOut</button>
+                <button mat-flat-button color="primary" (click)="connectUs()">Contact US</button>
+            </div>
+        </footer>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="sticky">
+            <mat-toolbar>
+                <span style="height: 56px;">
+                    <img src={{myPhoto}} class="img-profile" (click)="sidenav.open()"/>
+                </span>
+                <span class="toolbar-fill-remaining-space"></span>
+                <span>
+                    <button color="primary" mat-raised-button (click)="openDialog()">New</button>
+                </span>
+            </mat-toolbar>
+        </div>
+        <div class="task-content">
+        <mat-tab-group selectedIndex={{selectedIndex}}>
+            <mat-tab label="Backlog">
+                <mat-accordion>
+                    <!--ng-template *ngFor="let task of submittedTasks" -->
+                    <div *ngFor="let task of submitTaskForms; index as taskIndex;">
+                    <form [formGroup]="task" >
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    {{task.value.taskType}}
+                                </mat-panel-title>
+                                <mat-panel-description>
+                                    {{task.value.taskName}}
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <div class="task-details-container">
+                                <input hidden formControlName="taskId">
+                                <mat-form-field class="input-full-width">
+                                    <input matInput formControlName="taskName" placeholder="Book Name">
+                                </mat-form-field>
+                                <mat-form-field class="input-full-width">
+                                    <input matInput type="number" formControlName="pagesCurrent" placeholder="Current Page">
+                                </mat-form-field>
+                                <mat-form-field class="input-full-width">
+                                    <input matInput type="number" formControlName="pagesIntotal" placeholder="Total Pages">
+                                </mat-form-field>
+                                <mat-form-field class="input-full-width">
+                                    <input matInput type="number" formControlName="expectedDays" placeholder="Expected Days">
+                                </mat-form-field>
+                                <div class="button-row">
+                                    <button mat-raised-button (click)="saveAndStart(task)">Start</button>
+                                    <button mat-raised-button (click)="update(task)">Update</button>
+                                    <button mat-raised-button (click)="delete(task, taskIndex, 'submitted')">Delete</button>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+                    </form>
+                    
+                    </div>
+                </mat-accordion>
+            </mat-tab>
+            <mat-tab label="On-going">
+                <mat-accordion>
+                    <div *ngFor="let task of ongoingTaskForms; index as taskIndex;">
+                    <form [formGroup]="task" >
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    {{task.value.taskType}}
+                                </mat-panel-title>
+                                <mat-panel-description>
+                                    {{task.value.taskName}}
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <div class="task-details-container">
+                                <div class="my-progress">
+                                    <div [ngStyle]="{'width': task.value.progress, 'background-color': task.value.progressColor}" class="my-progress-bar"></div>
+                                </div>
+                                <div style="margin-bottom: 10px"></div>
+                                <input hidden formControlName="taskId">
+                                <input hidden type="number" formControlName="taskStatus">
+                                <p>
+                                    <mat-form-field class="inpiut-half-left-width">
+                                        <mat-select placeholder="Current Page" formControlName="pagesCurrent" (selectionChange)="pageChange($event, taskIndex)">
+                                            <mat-option *ngFor="let page of [].constructor(task.value.pagesIntotal); index as i;" [value]="i+1">
+                                                {{i+1}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                    <mat-form-field class="inpiut-half-right-width">
+                                        <input matInput type="number" formControlName="pagesIntotal" readonly="true" placeholder="Total Pages">
+                                    </mat-form-field>
+                                </p>
+                                <p>
+                                    <mat-form-field class="inpiut-half-left-width">
+                                        <input matInput formControlName="startTime" readonly="true" placeholder="Start Time">
+                                    </mat-form-field>
+                                    <mat-form-field class="inpiut-half-right-width">
+                                        <input matInput formControlName="expectedDays" readonly="true" placeholder="Expected Duration">
+                                    </mat-form-field>
+                                </p>
+                                <div [chart]="task.value.chartData"></div>
+                                <div class="button-row">
+                                    <button mat-raised-button (click)="doneDialog(task, taskIndex, 'on-going')">Done</button>
+                                    <button mat-raised-button (click)="deleteDialog(task, taskIndex, 'on-going')">Delete</button>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+                    </form>
+                    </div>
+                </mat-accordion>
+            </mat-tab>
+            <mat-tab label="Achievement">
+                <mat-accordion>
+                    <div *ngFor="let task of doneTaskForms; index as taskIndex;">
+                    <div id="Book_{{taskIndex}}">
+                    <form [formGroup]="task" >
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    {{task.value.taskType}}
+                                </mat-panel-title>
+                                <mat-panel-description>
+                                    {{task.value.taskName}}
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <div class="task-details-container">
+                                <input hidden formControlName="taskId">
+                                <input hidden type="number" formControlName="taskStatus">
+                                <mat-form-field class="input-full-width">
+                                    <input matInput type="number" formControlName="pagesIntotal" readonly="true" placeholder="Total Pages">
+                                </mat-form-field>
+                                <mat-form-field class="input-full-width">
+                                    <input matInput formControlName="startTime" readonly="true" placeholder="Start Time">
+                                </mat-form-field>
+                                <mat-form-field class="input-full-width">
+                                    <input matInput formControlName="endTime" readonly="true" placeholder="End Time">
+                                </mat-form-field>
+                                <div [chart]="task.value.chartData"></div>
+                                <div class="button-row">
+                                    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>more_horiz</mat-icon></button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="deleteDialog(task, taskIndex, 'Finished')">Delete</button>
+                                        <button mat-menu-item (click)="shareDialog(task, taskIndex, 'Finished')">Share</button>
+                                    </mat-menu>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+                    </form>
+                    </div>
+                    </div>
+                </mat-accordion>
+            </mat-tab>
+        </mat-tab-group> 
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

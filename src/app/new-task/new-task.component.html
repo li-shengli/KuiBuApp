@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Create New Task</h2>
+<form [formGroup]="newTaskForm">
+  <div class="task-details-container">
+    <mat-form-field>
+      <mat-select placeholder="Task Type" formControlName="taskType" itemtype="number">
+        <mat-option value="Reading">Reading</mat-option>
+        <mat-option value="Sports">Sports</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="taskName" placeholder="Book Name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="pagesCurrent" placeholder="Pages already done">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="pagesIntotal" placeholder="Total pages of the book">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" formControlName="expectedDays" placeholder="How many days needed to finish this book?">
+    </mat-form-field>
+  </div>
+  <div class="button-row">
+    <button mat-raised-button tabindex="-1" [mat-dialog-close]="newTaskForm">Save</button>
+    <button mat-raised-button mat-dialog-close>Cancel</button>  
+  </div>
+</form>

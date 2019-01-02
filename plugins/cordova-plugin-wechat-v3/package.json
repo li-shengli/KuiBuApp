@@ -1,0 +1,72 @@
+{
+  "_from": "cordova-plugin-wechat-v3@1.0.6",
+  "_id": "cordova-plugin-wechat-v3@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha512-Wtl+0miHUUBFkn+1NchJwMz/VGlCGQ62V+c9VzczYAsi3iwqHSs1CKx9xADT88RHeZB83wBdoLDlDJd4msAwlA==",
+  "_location": "/cordova-plugin-wechat-v3",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-wechat-v3@1.0.6",
+    "name": "cordova-plugin-wechat-v3",
+    "escapedName": "cordova-plugin-wechat-v3",
+    "rawSpec": "1.0.6",
+    "saveSpec": null,
+    "fetchSpec": "1.0.6"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-wechat-v3/-/cordova-plugin-wechat-v3-1.0.6.tgz",
+  "_shasum": "3d040f1593f2b1307e2610468cd111f41b7ef72e",
+  "_spec": "cordova-plugin-wechat-v3@1.0.6",
+  "_where": "C:\\Users\\shengli\\KuiBuApp",
+  "author": {
+    "name": "eleven.mo",
+    "email": "mty918@163.com"
+  },
+  "bugs": {
+    "url": "https://git.coding.net/mty918/cordova-plugin-wechat.git"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-wechat-v3",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "A cordova plugin, a JS version of Wechat SDK",
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova": ">=6.1.0",
+        "cordova-android": ">=6.1.0",
+        "cordova-ios": ">=4.3.1"
+      },
+      "<2.0.0": {
+        "cordova": ">=3.5.0"
+      }
+    }
+  },
+  "homepage": "https://git.coding.net/mty918/cordova-plugin-wechat.git#readme",
+  "keywords": [
+    "cordova",
+    "wechat",
+    "weixin",
+    "share",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-wechat-v3",
+  "repository": {
+    "type": "git",
+    "url": "https://git.coding.net/mty918/cordova-plugin-wechat.git"
+  },
+  "version": "1.0.6"
+}

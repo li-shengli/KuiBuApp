@@ -1,0 +1,34 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.lisl.kuibu"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.lisl.kuibu"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.lisl.kuibu"
+    },
+    "cordova-plugin-wechat-v3": {
+      "WECHATAPPID": "wxfa89ba9c147f198f",
+      "PACKAGE_NAME": "com.lisl.kuibu"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.lisl.kuibu"
+    },
+    "cordova-plugin-qrcodejs": {
+      "PACKAGE_NAME": "com.gemalto.spp"
+    },
+    "cordova-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.gemalto.spp"
+    }
+  },
+  "dependent_plugins": {}
+}

@@ -1,0 +1,25 @@
+.img-sharing-wechatSession {
+  background-image: url(../../assets/img/wechat.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 88px;
+  width: 88px;
+  margin-right: 10px;
+}
+
+.img-sharing-wechatTimeline {
+  background-image: url(../../assets/img/timeline.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 88px;
+  width: 88px;
+}
+
+.task-sharing-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-sharing-container > * {
+  width: 100%;
+}

@@ -1,0 +1,76 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@5.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-wechat-v3": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-wechat-v3@1.0.6"
+    },
+    "is_top_level": true,
+    "variables": {
+      "WECHATAPPID": "wxfa89ba9c147f198f"
+    }
+  },
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@^4.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-compat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-compat@^1.0.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-add-swift-support": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-add-swift-support"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-qrcodejs": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/MenelicSoftware/cordova-plugin-qrcodejs"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-barcodescanner": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-barcodescanner"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

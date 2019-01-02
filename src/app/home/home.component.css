@@ -1,0 +1,102 @@
+.header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover
+}
+
+.toolbar-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.img-profile {
+  height: 56px;
+  width: 56px
+}
+
+.inpiut-full-width {
+  width: 100%;
+}
+
+.inpiut-half-right-width {
+  width: 35% !important;
+  float: right;
+  
+}
+
+.inpiut-half-left-width {
+  width: 60% !important;;
+  float: left;
+  
+}
+
+.task-details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-details-container > * {
+  width: 100%;
+}
+
+.button-row button,
+.button-row a {
+  margin-right: 8px;
+  float: right;
+}
+
+.sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sideNav-style {
+  min-width: 270px;
+  background-color: lightcyan;
+}
+
+.sideNav-card {
+  background-image: url(../../assets/img/sideNav-header.jpg);
+}
+
+.sideNav-header-image {
+  background-image: url(../../assets/img/125495334_31n.jpg);
+  background-size: cover;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.my-progress {
+  width: 100%;
+  border-radius:5px;
+  background-color: lightgrey;
+}
+
+.my-progress-bar {
+  border-radius:5px;
+  height: 10px !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+  font-weight: bold !important;
+  
+}
+
+.sticky {
+  overflow: hidden;
+  background-color: lightblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.task-content {
+  padding-top: 56px;
+  z-index: -1;
+}
