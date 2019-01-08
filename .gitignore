@@ -5,11 +5,11 @@
 *.log
 
 # compile
-dist/*
-node_modules/*
-platforms/*
-plugins/*
-www/*
+dist/
+node_modules/
+platforms/
+plugins/
+www/
 
 
 # BlueJ files
