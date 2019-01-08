@@ -248,6 +248,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 let matchedUsers = users.filter(user => { return user.id === newUser.id; });
                 matchedUsers[0].nickName = newUser.nickName;
                 matchedUsers[0].motto = newUser.motto;
+                matchedUsers[0].photo = newUser.photo;
 
                 // save user
                 localStorage.setItem('currentUser', JSON.stringify(matchedUsers[0]));

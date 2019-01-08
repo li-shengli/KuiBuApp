@@ -1,8 +1,8 @@
-<form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="userDetailsForm">
   <div class="user-details-container">
     <input hidden formControlName="id">
     <p>
-      <img src="assets/img/125495334_31n.jpg" id="myImage" class="img-profile"/>
+      <img src="{{myPhoto}}" id="myImage" class="img-profile"/>
       <button mat-icon-button (click)="takePic()">
         <mat-icon >create</mat-icon>
       </button>
@@ -15,7 +15,7 @@
     </mat-form-field>
   </div>
   <div class="button-row">
-      <button mat-raised-button type="submit">Update</button>
+      <button mat-raised-button (click)="onSubmit()">Update</button>
       <button mat-raised-button (click)="qrCode()">QR Code</button>
       <button mat-raised-button [routerLink]="['']">Canel</button>
   </div>

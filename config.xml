@@ -47,5 +47,7 @@
     <plugin name="cordova-plugin-camera" spec="^4.0.3" />
     <plugin name="cordova-plugin-qrcodejs" spec="https://github.com/MenelicSoftware/cordova-plugin-qrcodejs" />
     <plugin name="cordova-plugin-barcodescanner" spec="^0.7.4" />
+    <plugin name="cordova-plugin-crop" spec="0.4.0" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <engine name="android" spec="^7.1.4" />
 </widget>

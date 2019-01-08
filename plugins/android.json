@@ -28,6 +28,12 @@
     },
     "cordova-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.gemalto.spp"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.lisl.kuibu"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.lisl.kuibu"
     }
   },
   "dependent_plugins": {}

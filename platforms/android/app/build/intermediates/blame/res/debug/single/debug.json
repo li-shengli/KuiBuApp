@@ -12,28 +12,44 @@
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\drawable\\launcher_icon.png"
     },
     {
-        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_launcher_icon.png.flat",
-        "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\launcher_icon.png"
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_crop__layout_done_cancel.xml.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\layout\\crop__layout_done_cancel.xml"
     },
     {
-        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_preferences.xml.flat",
-        "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\xml\\preferences.xml"
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\launcher_icon.png"
     },
     {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_config.xml.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
     },
     {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_preferences.xml.flat",
+        "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\xml\\preferences.xml"
+    },
+    {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_history_list_item.xml.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\layout\\history_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_crop__tile.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-xhdpi\\crop__tile.png"
     },
     {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_icon.png.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\mipmap-xhdpi\\icon.png"
     },
     {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_crop__texture.xml.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable\\crop__texture.xml"
+    },
+    {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_encode.xml.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\layout-land\\encode.xml"
+    },
+    {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_crop__divider.9.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-mdpi\\crop__divider.9.png"
     },
     {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_launcher_icon.png.flat",
@@ -52,6 +68,10 @@
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\menu\\history.xml"
     },
     {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_crop__ic_cancel.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-xhdpi\\crop__ic_cancel.png"
+    },
+    {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_share.xml.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\layout\\share.xml"
     },
@@ -60,8 +80,16 @@
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\layout\\help.xml"
     },
     {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_crop__selectable_background.xml.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable\\crop__selectable_background.xml"
+    },
+    {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shopper_icon.png.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\drawable\\shopper_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_crop__activity_crop.xml.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\layout\\crop__activity_crop.xml"
     },
     {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_shopper_icon.png.flat",
@@ -80,8 +108,16 @@
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\launcher_icon.png"
     },
     {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_crop__ic_done.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-xhdpi\\crop__ic_done.png"
+    },
+    {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu_encode.xml.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\menu\\encode.xml"
+    },
+    {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_crop__divider.9.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-xhdpi\\crop__divider.9.png"
     },
     {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
@@ -92,12 +128,24 @@
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\mipmap-hdpi\\icon.png"
     },
     {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_crop__divider.9.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-hdpi\\crop__divider.9.png"
+    },
+    {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu_capture.xml.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\menu\\capture.xml"
     },
     {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-ldpi_screen.png.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\drawable-port-ldpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_crop__ic_done.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-mdpi\\crop__ic_done.png"
+    },
+    {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_crop__ic_cancel.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-hdpi\\crop__ic_cancel.png"
     },
     {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_search_book_contents.xml.flat",
@@ -116,11 +164,23 @@
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\layout\\encode.xml"
     },
     {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_crop__ic_cancel.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-mdpi\\crop__ic_cancel.png"
+    },
+    {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_crop__selectable_background.xml.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-v21\\crop__selectable_background.xml"
+    },
+    {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_bookmark_picker_list_item.xml.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\layout\\bookmark_picker_list_item.xml"
     },
     {
         "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-ldpi_icon.png.flat",
         "source": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\src\\main\\res\\mipmap-ldpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\shengli\\KuiBuApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_crop__ic_done.png.flat",
+        "source": "C:\\Users\\shengli\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.0.aar\\805c98978181918869d64b5661439ca5\\res\\drawable-hdpi\\crop__ic_done.png"
     }
 ]

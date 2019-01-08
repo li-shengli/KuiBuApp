@@ -8,6 +8,8 @@ import { QrcodeDisplayComponent } from '../qrcode-display/qrcode-display.compone
 declare var navigator: any;
 declare var Camera: any;
 declare var cordova: any;
+declare var plugins: any;
+declare var window: any;
 
 @Component({
   selector: 'app-user-profile',
@@ -16,6 +18,7 @@ declare var cordova: any;
 })
 export class UserProfileComponent implements OnInit {
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  myPhoto: string = "assets/img/125495334_31n.jpg";
   userDetailsForm: FormGroup;
 
   constructor(
@@ -30,14 +33,19 @@ export class UserProfileComponent implements OnInit {
     this.userDetailsForm = this.formBuilder.group ({
       id: [this.currentUser.id],
       nickName: [this.currentUser.nickName],
-      motto: [this.currentUser.motto]
+      motto: [this.currentUser.motto],
+      photo: "assets/img/125495334_31n.jpg"
     });
 
+    if (this.currentUser.photo != null) {
+      this.myPhoto = this.currentUser.photo;
+    }
 
   }
 
   onSubmit() {
     console.log("Update user details: " + this.userDetailsForm.value.nickName);
+    this.userDetailsForm.value.photo = document.getElementById('myImage').getAttribute("src");
     this.userService.update(this.userDetailsForm.value).subscribe(
       data => {
         console.log('user stored');
@@ -49,21 +57,41 @@ export class UserProfileComponent implements OnInit {
       });
   }
 
-  onSuccess(imageData) {
-    var image = document.getElementById('myImage');
-    var imageUrl = "data:image/jpeg;base64," + imageData
-    image.setAttribute('src', "data:image/jpeg;base64," + imageData);
-    this.currentUser.photo = imageUrl;
-    this.userService.update(this.currentUser).subscribe(
-      data => {
-        console.log('user stored');
-        this.router.navigate(['']);
-      },
-      error => {
-        console.log('something is wrong: '+ error.message);
-        this.alertService.error(error.message);
+  onSuccess(imageUrl) {
+      const options = { quality: 100 };
+
+      plugins.crop.promise(imageUrl, options).then( 
+        (path) => {
+          function getFileContentAsBase64(path, callback){
+            window.resolveLocalFileSystemURL(path, gotFile, fail);
+                    
+            function fail(e) {
+              alert('Cannot found requested file');
+            }
+
+            function gotFile(fileEntry) {
+               fileEntry.file(function(file) {
+                  var reader = new FileReader();
+                  reader.onloadend = function(e) {
+                       var content = this.result;
+                       callback(content);
+                  };
+                  // The most important point, use the readAsDatURL Method from the file plugin
+                  reader.readAsDataURL(file);
+               });
+            }
+        }
+
+        getFileContentAsBase64(path, function (base64Image) {
+            var image = document.getElementById('myImage');
+            image.setAttribute('src', base64Image);
+          });
+      }).catch( (error) => {
+        alert("something wrong for "+error);
       });
+
   }
+
 
   // capture error callback
   captureError (error) {
@@ -72,27 +100,17 @@ export class UserProfileComponent implements OnInit {
 
   // start image capture
   takePic() {
-    var srcType = Camera.PictureSourceType.SAVEDPHOTOALBUM;
-    var options = this.setOptions(srcType);
+    let options = {
+        allowEdit: false,
+        sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM,
+        mediaType: Camera.MediaType.PICTURE,
+        destinationType: Camera.DestinationType.FILE_URI,
+        targetWidth: 500,
+        targetHeight: 500
+    }
     
     navigator.camera.getPicture(this.onSuccess, this.captureError, options);
-  }
-
-  setOptions(srcType) {
-    var options = {
-        // Some common settings are 20, 50, and 100
-        quality: 50,
-        destinationType: Camera.DestinationType.DATA_URL,
-        // In this app, dynamically set the picture source, Camera or photo gallery
-        sourceType: srcType,
-        encodingType: Camera.EncodingType.JPEG,
-        mediaType: Camera.MediaType.PICTURE,
-        allowEdit: true,
-        targetHeight: 100,
-        targetWidth: 100,
-        correctOrientation: true  //Corrects Android orientation quirks
-    }
-    return options;
+    
   }
 
   qrCode() {
@@ -103,25 +121,14 @@ export class UserProfileComponent implements OnInit {
         colorLight: "#ffffff",
     };
     
-    cordova.plugins.qrcodejs.encode('TEXT_TYPE', 'A78564FF786BBB1244', (base64EncodedQRImage) => {
-        console.info('QRCodeJS response is ' + base64EncodedQRImage);
-          this.doneDialog(base64EncodedQRImage);
+    cordova.plugins.qrcodejs.encode('TEXT_TYPE', this.currentUser.id, (base64EncodedQRImage) => {
+          this.dialog.open(QrcodeDisplayComponent, {
+            width: '300px',
+            data: {imgSrc: base64EncodedQRImage}
+          });
         }, (err) => {
-            console.error('QRCodeJS error is ' + JSON.stringify(err));
+          console.error('QRCodeJS error is ' + JSON.stringify(err));
         }, options);
   }
 
-  doneDialog(base64EncodedQRImage) {
-    const dialogRef = this.dialog.open(QrcodeDisplayComponent, {
-      width: '300px',
-      data: {imgSrc: base64EncodedQRImage}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      
-    });
-  }
-  
-  
-  
 }
