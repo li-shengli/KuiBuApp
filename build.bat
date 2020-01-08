@@ -22,4 +22,5 @@ xcopy .\dist\KuiBu .\www /E /C /I /Y
 echo "**************************************************"
 echo  Build the Android App
 echo "**************************************************"
-call cordova build android
+#call cordova build android
+call cordova run android --release -- --keystore=./keystore/com.lisl.kuibu.jks --storePassword=com.lisl.kuibu --alias=com.lisl.kuibu --password=com.lisl.kuibu
